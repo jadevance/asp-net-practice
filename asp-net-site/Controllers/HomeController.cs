@@ -15,7 +15,7 @@ namespace asp_net_site.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Kittens are great";
 
             return View();
         }
