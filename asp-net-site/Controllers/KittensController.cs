@@ -9,10 +9,14 @@ namespace asp_net_site.Controllers
     public class KittensController : Controller
     {
         // GET: /Kittens/
-        public string Index()
+        public ActionResult Index(string letterCase)
         {
-            return "Hello from Kittens.Index()";
-
+            var kittens = "OMGKITTENS"; 
+            if (letterCase == "lower")
+            {
+                return Content(kittens.ToLower());
+            }
+            return Content(kittens);
         }
         // GET: /Kittens/Browse?breed=?Calico
         public string Browse(string breed)

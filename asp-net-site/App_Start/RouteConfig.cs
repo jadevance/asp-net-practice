@@ -14,10 +14,16 @@ namespace asp_net_site
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "Kittens",
+                url: "kittens",
+                defaults: new { controller = "Kittens", action = "Index"}
+            );
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
         }
     }
 }
